@@ -3,45 +3,41 @@
     <Menu mode="horizontal"
           theme="dark"
           active-name="1">
-      <MenuItem name="1" to="/home">
-      <Icon type="ios-paper" />
-      首页
-      </MenuItem>
-      <MenuItem name="2" to="/about">
-      <Icon type="ios-people" />
-      关于我们
-      </MenuItem>
-      <Submenu name="3">
-        <template slot="title">
-          <Icon type="ios-stats" />
-          统计分析
-        </template>
-        <MenuGroup title="使用">
-          <MenuItem name="3-1">新增和启动</MenuItem>
-          <MenuItem name="3-2">活跃分析</MenuItem>
-          <MenuItem name="3-3">时段分析</MenuItem>
-        </MenuGroup>
-        <MenuGroup title="留存">
-          <MenuItem name="3-4">用户留存</MenuItem>
-          <MenuItem name="3-5">流失用户</MenuItem>
-        </MenuGroup>
-      </Submenu>
-      <MenuItem name="4">
-      <Icon type="ios-construct" />
-      综合设置
-      </MenuItem>
+      <layout>
+        <div slot="left">
+          <div style="color: white;">FastWork</div>
+        </div>
+        <div slot="content">
+          <MenuItem class="mainHomeMenuItemClass"
+                    v-for="item in naviData"
+                    :key="item.name"
+                    :name="item.name"
+                    :to="item.to"> {{ item.title }} </MenuItem>
+        </div>
+        <div slot="right">
+          <div style="color: white;">更快速的开发</div>
+        </div>
+      </layout>
     </Menu>
-    <router-view />
+    <div style="padding: 20px;">
+      <router-view />
+    </div>
   </div>
 </template>
 
 <script>
+import layout from './mainHomeLayout.vue'
+import { naviData } from './naviData.js'
 export default {
   name: 'mainHome',
   props: {},
-  components: {},
+  components: {
+    layout
+  },
   data () {
-    return {}
+    return {
+      naviData
+    }
   },
   watch: {},
   computed: {},
@@ -53,4 +49,8 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+.mainHomeMenuItemClass {
+  display: inline-block;
+}
+</style>
