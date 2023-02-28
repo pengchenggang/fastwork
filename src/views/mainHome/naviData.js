@@ -5,6 +5,11 @@ export const naviData = [
     name: 'home'
   },
   {
+    title: '组件代码',
+    to: '/components',
+    name: 'components'
+  },
+  {
     title: '关于我们',
     to: '/about',
     name: 'about'

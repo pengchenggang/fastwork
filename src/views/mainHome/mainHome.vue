@@ -19,7 +19,7 @@
         </div>
       </layout>
     </Menu>
-    <div style="padding: 20px;">
+    <div>
       <router-view />
     </div>
   </div>

@@ -18,6 +18,19 @@ const routes = [
         component: () => import('@/views/HomeView.vue')
       },
       {
+        path: '/components',
+        name: 'components',
+        redirect: '/components/getAc',
+        component: () => import('@/views/components/components.vue'),
+        children: [
+          {
+            path: 'getAc',
+            name: 'getAc',
+            component: () => import('@/views/components/getAc/getAc.vue'),
+          }
+        ]
+      },
+      {
         path: '/about',
         name: 'about',
         component: () => import('@/views/AboutView.vue')
