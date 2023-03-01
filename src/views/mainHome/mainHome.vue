@@ -23,6 +23,7 @@
     <div>
       <div style="height: 60px;"></div>
       <router-view />
+      <!-- <div style="margin-left: 240px; background-color: #666; margin-top: 20px;">bottom</div> -->
     </div>
   </div>
 </template>
