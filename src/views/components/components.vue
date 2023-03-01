@@ -53,15 +53,26 @@ export default {
 }
 </script>
 
-<style>
-.fastwork-article h1 {
-  font-size: 26px;
-  font-weight: 400;
-  margin: 12px 0;
-}
-.fastwork-article h2 {
-  margin: 12px 0;
-  font-size: 20px;
-  font-weight: 400;
+<style lang="less">
+.fastwork-article {
+  font-size: 16px;
+  font-family: 微软雅黑;
+  ul {
+    padding-left: 40px;
+    list-style-type: disc;
+  }
+  li {
+    margin-bottom: 5px;
+  }
+  h1 {
+    font-size: 26px;
+    font-weight: 400;
+    margin: 12px 0;
+  }
+  h2 {
+    margin: 12px 0;
+    font-size: 20px;
+    font-weight: 400;
+  }
 }
 </style>

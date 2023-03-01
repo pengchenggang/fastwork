@@ -6,6 +6,7 @@ import { Button, Table, Menu, MenuItem, Layout, Anchor, AnchorLink, Affix } from
 import 'view-design/dist/styles/iview.css'
 import './main.less'
 import compLayout from '@/views/components/compLayout.vue'
+import anchorZen from '@/components/anchorZen/anchorZen.vue'
 
 Vue.component('compLayout', compLayout)
 Vue.component('Button', Button)
@@ -16,6 +17,7 @@ Vue.component('Layout', Layout)
 Vue.component('Anchor', Anchor)
 Vue.component('AnchorLink', AnchorLink)
 Vue.component('Affix', Affix)
+Vue.component('anchorZen', anchorZen)
 // Vue.use(ViewUI)
 
 Vue.config.productionTip = false

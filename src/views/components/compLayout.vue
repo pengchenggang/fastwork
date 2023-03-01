@@ -1,9 +1,9 @@
 <template>
   <div>
-    <div style="position: absolute; width: 150px;">
+    <div style="position: absolute; width: 200px;">
       <slot name="anchor"></slot>
     </div>
-    <div style="margin-left: 150px;">
+    <div style="margin-left: 200px;">
       <slot name="content"></slot>
     </div>
   </div>
