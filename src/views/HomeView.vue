@@ -1,18 +1,17 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <br>
+    <br>
+    <br>
+    <br>
+    此组件库是在 <a href="http://v4.iviewui.com/components/input" target="_blank">iview</a> 的基础上二次封装
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
   name: 'HomeView',
   components: {
-    HelloWorld
   }
 }
 </script>

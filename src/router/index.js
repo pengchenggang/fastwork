@@ -27,6 +27,11 @@ const routes = [
             path: 'getAc',
             name: 'getAc',
             component: () => import('@/views/components/getAc/getAc.vue'),
+          },
+          {
+            path: 'tableZen',
+            name: 'tableZen',
+            component: () => import('@/views/components/tableZen/tableZen.vue'),
           }
         ]
       },

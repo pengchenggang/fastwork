@@ -2,7 +2,7 @@
   <div>
     <Menu mode="horizontal"
           theme="dark"
-          active-name="1">
+          :active-name="activeName">
       <layout>
         <div slot="left">
           <div style="color: white;">FastWork</div>
@@ -36,15 +36,25 @@ export default {
   },
   data () {
     return {
+      activeName: 'home',
       naviData
     }
   },
   watch: {},
   computed: {},
-  methods: {},
+  methods: {
+    getActiveName () {
+      console.info('router path', this.$router.history.current.path)
+      const pathArr = this.$router.history.current.path.split('/')
+      console.info('pathArr', pathArr)
+      this.activeName = pathArr[1]
+    },
+  },
   created () { },
   activated () { },
-  mounted () { },
+  mounted () {
+    this.getActiveName()
+  },
   beforeDestroy () { },
 }
 </script>

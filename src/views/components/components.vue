@@ -1,10 +1,13 @@
 <template>
   <div>
-    <Menu theme="light" @on-select="selectHandle" style="position: absolute">
+    <Menu theme="light"
+          :active-name="activeName"
+          @on-select="selectHandle"
+          style="position: absolute">
       <MenuItem name="getAc">GetAc</MenuItem>
       <MenuItem name="tableZen">TableZen</MenuItem>
     </Menu>
-    <div style="margin-left: 240px;">
+    <div style="margin-left: 240px; padding: 20px;">
       <router-view />
     </div>
   </div>
@@ -17,22 +20,26 @@ export default {
   components: {},
   data () {
     return {
+      activeName: 'getAc'
     }
   },
   watch: {},
   computed: {},
   methods: {
+    getActiveName () {
+      this.activeName = this.$router.history.current.name
+    },
     selectHandle (name) {
       console.info('selectHandle name', name)
+      this.$router.push({
+        name
+      })
     },
   },
   created () { },
   activated () { },
   mounted () {
-    const current = this.$router.history.current
-    const name = current.name
-    console.info('current', current)
-    console.info('name', name)
+    this.getActiveName()
   },
   beforeDestroy () { }
 }
