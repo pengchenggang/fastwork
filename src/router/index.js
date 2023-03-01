@@ -32,6 +32,11 @@ const routes = [
             path: 'tableZen',
             name: 'tableZen',
             component: () => import('@/views/components/tableZen/tableZen.vue'),
+          },
+          {
+            path: 'plopjs',
+            name: 'plopjs',
+            component: () => import('@/views/components/plopjs/plopjs.vue'),
           }
         ]
       },

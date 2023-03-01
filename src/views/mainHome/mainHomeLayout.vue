@@ -42,6 +42,7 @@ export default {
   display: inline-block;
 }
 .layout {
+  height: 60px;
   width: 100%;
   display: flex;
   gap: 16px;

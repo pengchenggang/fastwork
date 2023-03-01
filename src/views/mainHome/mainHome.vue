@@ -2,6 +2,7 @@
   <div>
     <Menu mode="horizontal"
           theme="dark"
+          style="position: fixed; width: 100%;"
           :active-name="activeName">
       <layout>
         <div slot="left">
@@ -20,6 +21,7 @@
       </layout>
     </Menu>
     <div>
+      <div style="height: 60px;"></div>
       <router-view />
     </div>
   </div>
