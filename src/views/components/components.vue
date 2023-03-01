@@ -9,9 +9,11 @@
       <MenuItem name="plopjs">plopjs</MenuItem>
     </Menu>
     <div style="margin-left: 240px; padding: 10px;">
-      <div style="height: 30px; line-height: 30px;">当前位置: 组件代码 / {{ activeName }}</div>
+      <!-- <div style="height: 30px; line-height: 30px;">当前位置: 组件代码 / {{ activeName }}</div> -->
       <!-- 60 + 20 + 30 = 110 -->
-      <div style="background-color: white; border: 1px solid #f2f2f2; padding: 20px; height: calc(100vh - 110px); overflow: auto;">
+      <!-- height: calc(100vh - 110px); overflow: auto; -->
+      <div class="fastwork-article"
+           style="background-color: white; border: 1px solid #f2f2f2; padding: 20px;">
         <router-view />
       </div>
     </div>
@@ -52,4 +54,14 @@ export default {
 </script>
 
 <style>
+.fastwork-article h1 {
+  font-size: 26px;
+  font-weight: 400;
+  margin: 12px 0;
+}
+.fastwork-article h2 {
+  margin: 12px 0;
+  font-size: 20px;
+  font-weight: 400;
+}
 </style>
