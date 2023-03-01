@@ -5,7 +5,7 @@
         <slot name="left"></slot>
       </div>
       <div class="grow1">
-        <div style="text-align: center;">
+        <div style="text-align: center; height: 60px;">
             <div class="mainHomeMenuClass">
               <slot name="content"></slot>
             </div>

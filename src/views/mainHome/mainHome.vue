@@ -1,12 +1,12 @@
 <template>
   <div>
     <Menu mode="horizontal"
-          theme="dark"
+          theme="light"
           style="position: fixed; width: 100%;"
           :active-name="activeName">
       <layout>
         <div slot="left">
-          <div style="color: white;">FastWork</div>
+          <div style="color: grep;">FastWork</div>
         </div>
         <div slot="content">
           <MenuItem class="mainHomeMenuItemClass"
@@ -16,7 +16,7 @@
                     :to="item.to"> {{ item.title }} </MenuItem>
         </div>
         <div slot="right">
-          <div style="color: white;">更快速的开发</div>
+          <div style="color: grep;">更快速的开发</div>
         </div>
       </layout>
     </Menu>
