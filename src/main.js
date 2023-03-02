@@ -7,6 +7,8 @@ import 'view-design/dist/styles/iview.css'
 import './main.less'
 import compLayout from '@/views/components/compLayout.vue'
 import anchorZen from '@/components/anchorZen/anchorZen.vue'
+import Highlight from './directive/highlight' // 这里是你项目highlight.js所在路径
+Vue.use(Highlight)
 
 Vue.component('compLayout', compLayout)
 Vue.component('Button', Button)
@@ -18,6 +20,7 @@ Vue.component('Anchor', Anchor)
 Vue.component('AnchorLink', AnchorLink)
 Vue.component('Affix', Affix)
 Vue.component('anchorZen', anchorZen)
+
 // Vue.use(ViewUI)
 
 Vue.config.productionTip = false

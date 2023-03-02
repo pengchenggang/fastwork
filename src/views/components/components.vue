@@ -58,10 +58,21 @@ export default {
   font-size: 16px;
   font-family: 微软雅黑;
   ul {
-    padding-left: 40px;
+    list-style: none;
+    padding-left: 20px;
     list-style-type: disc;
   }
   li {
+    list-style: none;
+    position: relative;
+    padding: 8px 16px 8px 16px;
+    border-radius: 4px;
+    color: #515a6e;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 10px;
+    border: 1px solid #abdcff;
+    background-color: #f0faff;
     margin-bottom: 5px;
   }
   h1 {

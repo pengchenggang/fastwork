@@ -11,6 +11,10 @@ module.exports = {
     parser: '@babel/eslint-parser'
   },
   rules: {
+    'quotes': 'off', // 引号类型 `` "" ''
+    'quote-props': 'off' , // 对象字面量中的属性名是否强制双引号
+    'dot-notation': 'off',
+    'no-useless-escape': 'off',
     'vue/no-unused-components': 'off',
     'vue/multi-word-component-names': 'off',
     'operator-linebreak': 'off',
@@ -33,10 +37,11 @@ module.exports = {
     'generator-star-spacing': 'off',
     // allow debugger during development
     // 'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'vue/no-parsing-error': [
-      2, {
-        'x-invalid-end-tag': false
-      }],
+    'vue/no-parsing-error': 'off',
+    // 'vue/no-parsing-error': [
+    //   2, {
+    //     'x-invalid-end-tag': false
+    //   }],
     'no-undef': 'off'
   }
 }
