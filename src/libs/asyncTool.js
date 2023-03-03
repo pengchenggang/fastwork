@@ -1,3 +1,4 @@
+/* eslint-disable */
 /**
  * asyncTool 异步工具1
  */

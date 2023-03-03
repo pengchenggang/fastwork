@@ -11,6 +11,7 @@ module.exports = {
     parser: '@babel/eslint-parser'
   },
   rules: {
+    'import/no-webpack-loader-syntax': 'off',
     'quotes': 'off', // 引号类型 `` "" ''
     'quote-props': 'off' , // 对象字面量中的属性名是否强制双引号
     'dot-notation': 'off',

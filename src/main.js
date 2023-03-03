@@ -8,6 +8,8 @@ import './main.less'
 import compLayout from '@/views/components/compLayout.vue'
 import anchorZen from '@/components/anchorZen/anchorZen.vue'
 import Highlight from './directive/highlight' // 这里是你项目highlight.js所在路径
+import playground from '@/components/playground/playground.vue'
+import codeZen from '@/components/playground/codeZen.vue'
 Vue.use(Highlight)
 
 Vue.component('compLayout', compLayout)
@@ -20,6 +22,8 @@ Vue.component('Anchor', Anchor)
 Vue.component('AnchorLink', AnchorLink)
 Vue.component('Affix', Affix)
 Vue.component('anchorZen', anchorZen)
+Vue.component('playground', playground)
+Vue.component('codeZen', codeZen)
 
 // Vue.use(ViewUI)
 
