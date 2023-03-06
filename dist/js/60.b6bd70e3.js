@@ -1,1 +1,0 @@
-"use strict";(self["webpackChunkfastwork"]=self["webpackChunkfastwork"]||[]).push([[60],{8060:function(s,k,e){e.r(k)}}]);

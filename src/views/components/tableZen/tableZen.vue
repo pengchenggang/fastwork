@@ -1,14 +1,19 @@
 <template>
   <div>
-    <playground filePath="src/views/components/tableZen/demo.vue"></playground>
+    <playground filePath="src/views/components/tableZen/demo.vue">
+      <demo></demo>
+    </playground>
   </div>
 </template>
 
 <script>
+import demo from './demo.vue'
 export default {
   name: 'tableZenP',
   props: {},
-  components: {},
+  components: {
+    demo
+  },
   data () {
     return {
     }
