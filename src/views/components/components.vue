@@ -5,7 +5,7 @@
           @on-select="selectHandle"
           style="position: fixed; height: calc(100% - 60px); top: 60px; overflow: auto;">
       <MenuItem name="getAc">GetAc</MenuItem>
-      <MenuItem name="tableZen">TableZen</MenuItem>
+      <MenuItem name="tableZenPage">TableZen</MenuItem>
       <MenuItem name="plopjs">plopjs</MenuItem>
     </Menu>
     <div style="margin-left: 240px; padding: 10px;">
