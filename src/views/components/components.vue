@@ -57,33 +57,47 @@ export default {
 .fastwork-article {
   font-size: 16px;
   font-family: 微软雅黑;
-  ul {
-    list-style: none;
-    padding-left: 20px;
-    list-style-type: disc;
+  ul,
+  ol {
+    padding-left: 28px;
   }
   li {
-    list-style: none;
-    position: relative;
-    padding: 8px 16px 8px 16px;
-    border-radius: 4px;
-    color: #515a6e;
-    font-size: 14px;
-    line-height: 16px;
-    margin-bottom: 10px;
-    border: 1px solid #abdcff;
-    background-color: #f0faff;
-    margin-bottom: 5px;
+    line-height: 28px;
   }
+  // ul {
+  //   list-style: none;
+  //   // padding-left: 20px;
+  //   list-style-type: disc;
+  // }
+  // li {
+  //   list-style: none;
+  //   position: relative;
+  //   padding: 8px 16px 8px 16px;
+  //   border-radius: 4px;
+  //   color: #515a6e;
+  //   font-size: 14px;
+  //   line-height: 16px;
+  //   margin-bottom: 10px;
+  //   border: 1px solid #abdcff;
+  //   background-color: #f0faff;
+  //   margin-bottom: 5px;
+  // }
   h1 {
-    font-size: 26px;
-    font-weight: 400;
-    margin: 12px 0;
+    // font-size: 26px;
+    // font-weight: 400;
+    // margin: 12px 0;
+    margin: 0 0 1.667rem;
+    font-size: 2.667rem;
+    font-weight: 600;
+    line-height: 1.31;
+    color: #252933;
   }
   h2 {
-    margin: 12px 0;
-    font-size: 20px;
-    font-weight: 400;
+    font-size: 19px;
+    font-weight: 700;
+    padding-left: 10px;
+    border-left: 5px solid #916dd5;
+    margin: 60px 0 20px 0;
   }
 }
 </style>

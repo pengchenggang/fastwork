@@ -10,6 +10,10 @@ import anchorZen from '@/components/anchorZen/anchorZen.vue'
 import Highlight from './directive/highlight' // 这里是你项目highlight.js所在路径
 import playground from '@/components/playground/playground.vue'
 import codeZen from '@/components/playground/codeZen.vue'
+import AsyncTool from '@/libs/asyncTool'
+Vue.prototype.$getAc = () => {
+  return new AsyncTool()
+}
 Vue.use(Highlight)
 
 Vue.component('compLayout', compLayout)
