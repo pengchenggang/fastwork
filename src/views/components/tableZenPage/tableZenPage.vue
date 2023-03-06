@@ -9,7 +9,7 @@
 <script>
 import demo from './demo.vue'
 export default {
-  name: 'tableZenP',
+  name: 'tableZenPage',
   props: {},
   components: {
     demo

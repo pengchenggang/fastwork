@@ -29,9 +29,9 @@ const routes = [
             component: () => import('@/views/components/getAc/getAc.vue'),
           },
           {
-            path: 'tableZen',
-            name: 'tableZen',
-            component: () => import('@/views/components/tableZen/tableZen.vue'),
+            path: 'tableZenPage',
+            name: 'tableZenPage',
+            component: () => import('@/views/components/tableZenPage/tableZenPage.vue'),
           },
           {
             path: 'plopjs',
