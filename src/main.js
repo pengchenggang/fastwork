@@ -12,7 +12,6 @@ import playground from '@/components/playground/playground.vue'
 import codeZen from '@/components/playground/codeZen.vue'
 import AsyncTool from '@/libs/asyncTool'
 import tableZen from '@/components/tableZen/tableZen.vue'
-Vue.component('tableZen', tableZen)
 
 Vue.prototype.$getAc = () => {
   return new AsyncTool()
@@ -31,6 +30,7 @@ Vue.component('Affix', Affix)
 Vue.component('anchorZen', anchorZen)
 Vue.component('playground', playground)
 Vue.component('codeZen', codeZen)
+Vue.component('tableZen', tableZen)
 
 // Vue.use(ViewUI)
 
