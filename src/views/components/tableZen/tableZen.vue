@@ -1,7 +1,7 @@
 <template>
   <div>
     <playground filePath="src/views/components/tableZen/demo.vue">
-      <demo></demo>
+      <!-- <demo></demo> -->111
     </playground>
   </div>
 </template>
