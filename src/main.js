@@ -11,6 +11,9 @@ import Highlight from './directive/highlight' // 这里是你项目highlight.js�
 import playground from '@/components/playground/playground.vue'
 import codeZen from '@/components/playground/codeZen.vue'
 import AsyncTool from '@/libs/asyncTool'
+import tableZen from '@/components/tableZen/tableZen.vue'
+Vue.component('tableZen', tableZen)
+
 Vue.prototype.$getAc = () => {
   return new AsyncTool()
 }

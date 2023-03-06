@@ -1,8 +1,7 @@
 <template>
   <div>
-    playground
     <component v-if="dynamicComponent"
-               :is="dynamicComponent"></component>000
+               :is="dynamicComponent"></component>
   </div>
 </template>
 
@@ -12,7 +11,12 @@ const loadView = (view) => { // 路由懒加载
 }
 export default {
   name: 'playground',
-  props: {},
+  props: {
+    filePath: {
+      type: String,
+      default: ''
+    },
+  },
   components: {
   },
   data () {
@@ -23,8 +27,15 @@ export default {
   watch: {},
   computed: {
     dynamicComponent () {
-      const asset = 'views/components/getAc/test.vue'
-      return () => import(`../../${asset}`) // import 里面必须跟着最少一个目录路径
+      console.info('dynamicComponent this.filePath', this.filePath)
+      // const asset = 'views/components/getAc/test.vue'
+      // const asset = 'views/components/tableZen/demo.vue'
+      if (this.filePath) {
+        const codeUrl = this.filePath.replace('src/', '')
+        return () => import(`../../${codeUrl}`) // import 里面必须跟着最少一个目录路径
+      } else {
+        return ''
+      }
     },
     // loader () {
     //   // const require2 = require('require-fool-webpack')

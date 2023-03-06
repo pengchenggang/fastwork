@@ -1,12 +1,11 @@
 <template>
   <div>
-    <playground filePath="src/views/components/tableZen/demo.vue"></playground>
+    <tableZen ref="tableZenRef"></tableZen>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'tableZenP',
   props: {},
   components: {},
   data () {
