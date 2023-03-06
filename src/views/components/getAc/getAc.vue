@@ -16,6 +16,10 @@
       </div>
       <div slot="content">
         <h1>getAc 异步执行函数队列</h1>
+        <blockquote>
+          <p>时间：20230306</p>
+          <p>作者：彭成刚</p>
+        </blockquote>
         <h2 id="GS">概述</h2>
         <ul>
           <li>环境: vue2</li>
@@ -99,9 +103,9 @@ ac.use((ctx, next) => {
 })
 ac.use(this.havaNameFunction, { ref: 'havaNameFunctionRef' })
 ac.run()</code></pre>
-<h2 id="IFTO">ctx.ifTo</h2>
-<p>ctx.ifTo(boolValue, next) 根据boolValue 判断是否进入next</p>
-<pre v-highlight><code>const ac = this.$getAc()
+        <h2 id="IFTO">ctx.ifTo</h2>
+        <p>ctx.ifTo(boolValue, next) 根据boolValue 判断是否进入next</p>
+        <pre v-highlight><code>const ac = this.$getAc()
   ac.ctx.yourCheck = true
 ac.use((ctx, next) => {
   if (ctx.ifTo(!ctx.yourCheck, next)) return

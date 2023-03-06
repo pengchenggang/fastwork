@@ -57,6 +57,25 @@ export default {
 .fastwork-article {
   font-size: 16px;
   font-family: 微软雅黑;
+
+  blockquote {
+    color: #8c8c8c;
+    border-left: 4px solid #2196f3;
+    background-color: #f0fdff;
+    padding: 1px 20px;
+    margin: 22px 0;
+    transition: color 0.35s;
+    p {
+      margin: 10px 0;
+    }
+  }
+  a.ivu-anchor-link-title {
+    line-height: 26px;
+  }
+  .ivu-anchor-link {
+    // padding: 8px 0 8px 16px;
+    padding: 2px 0 2px 16px;
+  }
   ul,
   ol {
     padding-left: 28px;
