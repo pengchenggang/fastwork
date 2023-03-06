@@ -3,13 +3,13 @@
     <Table border
            :columns="columns"
            :data="tableData">
-      <!-- <template v-for="uniSlot in slotArr"
+      <template v-for="uniSlot in slotArr"
                 slot-scope="{ row, index }"
                 :slot="uniSlot">
         <slot :name="uniSlot"
               :row="row"
               :index="index"></slot>
-      </template> -->
+      </template>
     </Table>
   </div>
 </template>
