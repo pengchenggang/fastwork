@@ -3,13 +3,13 @@
     <Table border
            :columns="columns"
            :data="tableData">
-      <template v-for="uniSlot in slotArr"
+      <!-- <template v-for="uniSlot in slotArr"
                 slot-scope="{ row, index }"
                 :slot="uniSlot">
         <slot :name="uniSlot"
               :row="row"
               :index="index"></slot>
-      </template>
+      </template> -->
     </Table>
   </div>
 </template>
@@ -70,7 +70,7 @@ export default {
       this.loading = true
       this.selectClear()
       const ctx = this
-      this.getTableData_(ctx, this.getTableData_callback)
+      this.getTableData_ && this.getTableData_(ctx, this.getTableData_callback)
       // this.$emit('getTableData', ctx, this.getTableData_callback)
     },
     getTableData_callback () {
