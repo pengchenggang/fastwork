@@ -17,7 +17,7 @@
         </ul>
 
         <pre v-highlight="getCode1()"><code></code></pre>
-        <playground></playground>
+        <!-- <playground></playground> -->
         <codeZen url="src/libs/asyncTool.js" codeClass="language-javascript"></codeZen>
         <h2 id="SYFF">使用方法</h2>
         <p>解决同步代码与异步代码的回调问题。</p>
