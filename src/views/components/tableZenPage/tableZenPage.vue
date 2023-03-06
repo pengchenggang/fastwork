@@ -1,8 +1,13 @@
 <template>
   <div>
-    <playground filePath="src/views/components/tableZen/demo.vue">
+    <!-- <playground @setComp="ctx => {
+      ctx.comp = () => import('@/views/components/tableZenPage/demo.vue')}">
       <demo></demo>
+    </playground> -->
+    <playground filePath="src/views/components/tableZenPage/demo.vue">
     </playground>
+    <!-- <codeZen
+             codeClass="language-javascript"></codeZen> -->
   </div>
 </template>
 

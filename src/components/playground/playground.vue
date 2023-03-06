@@ -1,6 +1,7 @@
 <template>
   <div>
-    <slot></slot>
+    <component v-if="dynamicComponent"
+               :is="dynamicComponent"></component>
   </div>
 </template>
 
@@ -25,17 +26,18 @@ export default {
   },
   watch: {},
   computed: {
-    // dynamicComponent () {
-    //   console.info('dynamicComponent this.filePath', this.filePath)
-    //   // const asset = 'views/components/getAc/test.vue'
-    //   // const asset = 'views/components/tableZen/demo.vue'
-    //   if (this.filePath) {
-    //     const codeUrl = this.filePath.replace('src/', '')
-    //     return () => import(`../../${codeUrl}`) // import 里面必须跟着最少一个目录路径
-    //   } else {
-    //     return ''
-    //   }
-    // },
+    dynamicComponent () {
+      console.info('dynamicComponent this.filePath', this.filePath)
+      // const asset = 'views/components/getAc/test.vue'
+      // const asset = 'views/components/tableZen/demo.vue'
+      if (this.filePath) {
+        console.info('dynamicComponent this.filePath', this.filePath)
+        const codeUrl = this.filePath.replace('src/', '')
+        return () => import(`../../${codeUrl}`) // import 里面必须跟着最少一个目录路径
+      } else {
+        return ''
+      }
+    },
     // loader () {
     //   // const require2 = require('require-fool-webpack')
     //   // const asset = '@/views/components/getAc/test.vue'
