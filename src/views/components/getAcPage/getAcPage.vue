@@ -21,13 +21,13 @@
           <p>作者：彭成刚</p>
         </blockquote>
         <h2 id="GS">概述</h2>
-        <ul>
+        <ul class="list">
           <li>环境: vue2</li>
           <li>解决: 同步代码与异步代码的回调问题</li>
           <li>具体: 顺序执行 this.$api</li>
         </ul>
         <h2 id="AZFF">安装方法</h2>
-        <ol>
+        <ol class="list">
           <li>将 asyncTool.js 放入到 /src/libs/asyncTool.js</li>
           <li>main.js 添加如下代码</li>
         </ol>

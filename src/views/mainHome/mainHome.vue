@@ -57,6 +57,21 @@ export default {
   activated () { },
   mounted () {
     this.getActiveName()
+    // // const resp = "<XML><auth><result>0</result><tokeninfo>AAAmNTw/eG1sIHZlcnNpb249IjEuMCIgZW5jb2Rpbmc9IlVURi</tokeninfo><authstatus>1</authstatus></auth></XML>"
+    // const resp1 = `<getauthstatusresp version="1"><result>0</result><errorinfo></errorinfo><authstatus>1</authstatus></getauthstatusresp>`
+    // // const resp = resp1.replace(/"/g, '\")')
+    // const resp = resp1
+    // const parser = new DOMParser()
+    // const xmlDoc = parser.parseFromString(resp, "text/xml")
+    // console.info('xmlDoc', xmlDoc)
+    // const result = xmlDoc.getElementsByTagName("result")
+    // const authstatus = xmlDoc.getElementsByTagName("authstatus")
+    // console.info('result', result)
+    // console.info('authstatus', authstatus)
+    // console.info('result[0].textContent', result[0].textContent)
+    // console.info('authstatus[0].textContent', authstatus[0].textContent)
+    // console.info('result[0].textContent == 0', result[0].textContent === 0)
+    // console.info('authstatus[0].textContent == 1', authstatus[0].textContent === 1)
   },
   beforeDestroy () { },
 }

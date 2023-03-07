@@ -76,12 +76,12 @@ export default {
     // padding: 8px 0 8px 16px;
     padding: 2px 0 2px 16px;
   }
-  ul,
-  ol {
+  ul.list,
+  ol.list {
     padding-left: 28px;
-  }
-  li {
-    line-height: 28px;
+    li {
+      line-height: 28px;
+    }
   }
   // ul {
   //   list-style: none;

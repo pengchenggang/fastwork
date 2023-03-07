@@ -3,47 +3,28 @@
     <tableZen ref="tableZenRef"></tableZen>
   </div>
 </template>
-
 <script>
 const columns = [
-  {
-    title: '姓名',
-    key: 'name'
-  }
+  { title: '姓名', key: 'name', },
+  { title: '年龄', key: 'age', }
 ]
 const tableData = [
-  {
-    name: '张三'
-  }
+  { name: '张三', age: '18岁' },
+  { name: '李四', age: '28岁' },
 ]
 export default {
-  props: {},
-  components: {},
-  data () {
-    return {
-    }
-  },
-  watch: {},
-  computed: {},
   methods: {
-    getTableData (ctx, next) { // 这里不能进行二次ac，有逻辑放再外层平级关系
+    setTableData (ctx, next) { // 这里不能进行二次ac，有逻辑放再外层平级关系
       ctx.tableData = tableData
-      ctx.total = 1
+      ctx.total = 2
       next()
     },
   },
-  created () { },
-  activated () { },
   mounted () {
     this.$refs.tableZenRef.search({
       columns: columns,
-      tableData: tableData,
-      getTableData: this.getTableData
+      setTableData: this.setTableData
     })
   },
-  beforeDestroy () { }
 }
 </script>
-
-<style>
-</style>

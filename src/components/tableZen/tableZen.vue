@@ -12,7 +12,12 @@
       </template>
     </Table>
     <div style="margin-top: 10px; text-align: right;">
-      <Page :total="40"
+      <Page :total="total"
+            :current="page"
+            :page-size="rows"
+            @on-change="changePage"
+            @on-page-size-change="changePageSize"
+            :disabled="currentParams === null"
             size="small"
             show-total
             show-elevator
@@ -43,8 +48,9 @@ export default {
       loading: false,
       useCurrentParams: true, // 使用外部的参数
       tempParams: null,
-      next_: null, // 外部的next
-      getTableData_: null,
+      currentParams: null,
+      outNext_: null, // 外部的next
+      setTableData_: null,
       selectionItems: [],
       tableData: []
     }
@@ -52,6 +58,25 @@ export default {
   watch: {},
   computed: {},
   methods: {
+    // 分页相关方法
+    changePage (page) {
+      this.page = page
+      this.useCurrentParams = false
+      this.setTableDataCore()
+    },
+    changePageSize (rows) {
+      this.rows = rows
+      this.useCurrentParams = false
+      this.setTableDataCore()
+    },
+    getParams (currentParams) { // 接口传参的时候一定要用这个函数过滤
+      if (this.useCurrentParams) {
+        this.tempParams = { ...currentParams }
+        return currentParams
+      } else {
+        return this.currentParams
+      }
+    },
     getSlot () {
       this.slotArr = []
       this.columns.forEach(item => {
@@ -62,30 +87,30 @@ export default {
     },
     search ({
       columns = [],
-      getTableData = null,
-      next = null
+      setTableData = null,
+      outNext = null
     }) {
       this.columns = columns
       this.getSlot()
-      this.next_ = next
-      this.getTableData_ = getTableData
+      this.outNext_ = outNext
+      this.setTableData_ = setTableData
       this.useCurrentParams = true
       this.page = 1
-      this.getTableDataCore()
+      this.setTableDataCore()
     },
-    getTableDataCore () {
+    setTableDataCore () {
       this.loading = true
       this.selectClear()
       const ctx = this
-      this.getTableData_ && this.getTableData_(ctx, this.getTableData_callback)
+      this.setTableData_ && this.setTableData_(ctx, this.setTableData_callback)
       // this.$emit('getTableData', ctx, this.getTableData_callback)
     },
-    getTableData_callback () {
+    setTableData_callback () {
       this.loading = false
       if (this.useCurrentParams) {
         this.currentParams = { ...this.tempParams }
       }
-      this.next_ && this.next_()
+      this.outNext_ && this.outNext_()
     },
     selectClear () {
       this.selectionItems = []
