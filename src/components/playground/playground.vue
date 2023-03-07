@@ -1,12 +1,12 @@
 <template>
   <div>
-    <layout title="普通表格">
+    <layout :title="title">
       <div slot="left">
         <component v-if="dynamicComponent"
                    :is="dynamicComponent"></component>
       </div>
       <div slot="left2">
-        普通表格
+        <slot></slot>
       </div>
       <div slot="right">
         <codeZen :url="filePath"
@@ -21,6 +21,10 @@ import layout from './playgroundLayout.vue'
 export default {
   name: 'playground',
   props: {
+    title: {
+      type: String,
+      default: ''
+    },
     filePath: {
       type: String,
       default: ''

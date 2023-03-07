@@ -11,6 +11,13 @@
               :index="index"></slot>
       </template>
     </Table>
+    <div style="margin-top: 10px; text-align: right;">
+      <Page :total="40"
+            size="small"
+            show-total
+            show-elevator
+            show-sizer />
+    </div>
   </div>
 </template>
 

@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 // import ViewUI from 'view-design'
-import { Button, Table, Menu, MenuItem, Layout, Anchor, AnchorLink, Affix, Row, Col, Card, Divider, Icon } from 'view-design'
+import { Button, Table, Menu, MenuItem, Layout, Anchor, AnchorLink, Affix, Row, Col, Card, Divider, Icon, Page } from 'view-design'
 import 'view-design/dist/styles/iview.css'
 import './main.less'
 import compLayout from '@/views/components/compLayout.vue'
@@ -34,6 +34,7 @@ Vue.component('Col', Col)
 Vue.component('Card', Card)
 Vue.component('Divider', Divider)
 Vue.component('Icon', Icon)
+Vue.component('Page', Page)
 
 Vue.component('playground', playground)
 Vue.component('codeZen', codeZen)
