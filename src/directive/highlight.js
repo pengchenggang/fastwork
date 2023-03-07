@@ -2,7 +2,8 @@
  * 自定义代码高亮插件
  */
 import hljs from 'highlight.js'
-import 'highlight.js/styles/a11y-dark.css' // 导入代码高亮样式
+// import 'highlight.js/styles/a11y-dark.css' // 导入代码高亮样式
+import 'highlight.js/styles/a11y-light.css' // 导入代码高亮样式
 // import 'highlight.js/styles/atom-one-dark.css' // 导入代码高亮样式
 
 // import 'highlight.js/styles/vs.css'

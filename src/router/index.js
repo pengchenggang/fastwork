@@ -20,13 +20,13 @@ const routes = [
       {
         path: '/components',
         name: 'components',
-        redirect: '/components/getAc',
+        redirect: '/components/getAcPage',
         component: () => import('@/views/components/components.vue'),
         children: [
           {
-            path: 'getAc',
-            name: 'getAc',
-            component: () => import('@/views/components/getAc/getAc.vue'),
+            path: 'getAcPage',
+            name: 'getAcPage',
+            component: () => import('@/views/components/getAcPage/getAcPage.vue'),
           },
           {
             path: 'tableZenPage',
@@ -52,8 +52,8 @@ const routes = [
 const router = new VueRouter({
   routes,
   base: '/fastwork/',
-  // mode: 'history'
-  mode: 'hash'
+  mode: 'history'
+  // mode: 'hash'
 })
 
 export default router

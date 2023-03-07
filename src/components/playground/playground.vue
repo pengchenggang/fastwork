@@ -1,14 +1,23 @@
 <template>
   <div>
-    <component v-if="dynamicComponent"
-               :is="dynamicComponent"></component>
+    <layout title="普通表格">
+      <div slot="left">
+        <component v-if="dynamicComponent"
+                   :is="dynamicComponent"></component>
+      </div>
+      <div slot="left2">
+        普通表格
+      </div>
+      <div slot="right">
+        <codeZen :url="filePath"
+                 codeClass="language-javascript"></codeZen>
+      </div>
+    </layout>
   </div>
 </template>
 
 <script>
-const loadView = (view) => { // 路由懒加载
-  return () => Promise.resolve(require(`${view}`).default)
-}
+import layout from './playgroundLayout.vue'
 export default {
   name: 'playground',
   props: {
@@ -18,6 +27,7 @@ export default {
     },
   },
   components: {
+    layout
   },
   data () {
     return {

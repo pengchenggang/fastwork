@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 // import ViewUI from 'view-design'
-import { Button, Table, Menu, MenuItem, Layout, Anchor, AnchorLink, Affix } from 'view-design'
+import { Button, Table, Menu, MenuItem, Layout, Anchor, AnchorLink, Affix, Row, Col, Card, Divider } from 'view-design'
 import 'view-design/dist/styles/iview.css'
 import './main.less'
 import compLayout from '@/views/components/compLayout.vue'
@@ -10,6 +10,7 @@ import anchorZen from '@/components/anchorZen/anchorZen.vue'
 import Highlight from './directive/highlight' // 这里是你项目highlight.js所在路径
 import playground from '@/components/playground/playground.vue'
 import codeZen from '@/components/playground/codeZen.vue'
+import codeIn from '@/components/playground/codeIn.vue'
 import AsyncTool from '@/libs/asyncTool'
 import tableZen from '@/components/tableZen/tableZen.vue'
 
@@ -28,9 +29,15 @@ Vue.component('Anchor', Anchor)
 Vue.component('AnchorLink', AnchorLink)
 Vue.component('Affix', Affix)
 Vue.component('anchorZen', anchorZen)
+Vue.component('Row', Row)
+Vue.component('Col', Col)
+Vue.component('Card', Card)
+Vue.component('Divider', Divider)
+
 Vue.component('playground', playground)
 Vue.component('codeZen', codeZen)
 Vue.component('tableZen', tableZen)
+Vue.component('codeIn', codeIn)
 
 // Vue.use(ViewUI)
 

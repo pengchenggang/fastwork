@@ -4,7 +4,7 @@
           :active-name="activeName"
           @on-select="selectHandle"
           style="position: fixed; height: calc(100% - 60px); top: 60px; overflow: auto;">
-      <MenuItem name="getAc">GetAc</MenuItem>
+      <MenuItem name="getAcPage">GetAc</MenuItem>
       <MenuItem name="tableZenPage">TableZen</MenuItem>
       <MenuItem name="plopjs">plopjs</MenuItem>
     </Menu>
@@ -117,6 +117,12 @@ export default {
     padding-left: 10px;
     border-left: 5px solid #916dd5;
     margin: 60px 0 20px 0;
+  }
+  h3 {
+    margin-top: 20px;
+    display: block;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed #666;
   }
 }
 </style>

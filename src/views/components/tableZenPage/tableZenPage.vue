@@ -6,8 +6,6 @@
     </playground> -->
     <playground filePath="src/views/components/tableZenPage/demo.vue">
     </playground>
-    <!-- <codeZen
-             codeClass="language-javascript"></codeZen> -->
   </div>
 </template>
 
