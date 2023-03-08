@@ -4,9 +4,7 @@
           :active-name="activeName"
           @on-select="selectHandle"
           style="position: fixed; height: calc(100% - 60px); top: 60px; overflow: auto;">
-      <MenuItem name="getAcPage">GetAc</MenuItem>
-      <MenuItem name="tableZenPage">TableZen</MenuItem>
-      <MenuItem name="plopjs">plopjs</MenuItem>
+      <MenuItem v-for="item in componentsList" :name="item.name" :key="item.name">{{ item.naviName }}</MenuItem>
     </Menu>
     <div style="margin-left: 240px; padding: 10px;">
       <!-- <div style="height: 30px; line-height: 30px;">当前位置: 组件代码 / {{ activeName }}</div> -->
@@ -21,12 +19,14 @@
 </template>
 
 <script>
+import { componentsList } from "@/router"
 export default {
   name: 'components',
   props: {},
   components: {},
   data () {
     return {
+      componentsList,
       activeName: 'getAc'
     }
   },
@@ -48,6 +48,8 @@ export default {
   activated () { },
   mounted () {
     this.getActiveName()
+    console.info('componentsList', componentsList)
+    console.info('this.$router', this.$router)
   },
   beforeDestroy () { }
 }
@@ -57,6 +59,22 @@ export default {
 .fastwork-article {
   font-size: 16px;
   font-family: 微软雅黑;
+
+  table.Alita {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-top: 1px solid #e8eaec;
+    border-left: 1px solid #e8eaec;
+    td, th {
+      border-right: 1px solid #e8eaec;
+      border-bottom: 1px solid #e8eaec;
+      padding: 5px 10px;
+    }
+    th {
+      background-color: #f8f8f9;
+    }
+  }
 
   blockquote {
     color: #8c8c8c;

@@ -5,6 +5,32 @@ import mainHome from '@/views/mainHome/mainHome.vue'
 
 Vue.use(VueRouter)
 
+export const componentsList = [
+  {
+    path: 'getAcPage',
+    name: 'getAcPage',
+    naviName: 'getAc',
+    component: () => import('@/views/components/getAcPage/getAcPage.vue'),
+  },
+  {
+    path: 'tableZenPage',
+    name: 'tableZenPage',
+    naviName: 'tableZen',
+    component: () => import('@/views/components/tableZenPage/tableZenPage.vue'),
+  },
+  {
+    path: 'autoHeightPage',
+    name: 'autoHeightPage',
+    naviName: 'autoHeight',
+    component: () => import('@/views/components/autoHeightPage/autoHeightPage.vue'),
+  },
+  {
+    path: 'plopjsPage',
+    name: 'plopjsPage',
+    naviName: 'plopjs',
+    component: () => import('@/views/components/plopjsPage/plopjsPage.vue'),
+  }
+]
 const routes = [
   {
     path: '/',
@@ -22,23 +48,7 @@ const routes = [
         name: 'components',
         redirect: '/components/getAcPage',
         component: () => import('@/views/components/components.vue'),
-        children: [
-          {
-            path: 'getAcPage',
-            name: 'getAcPage',
-            component: () => import('@/views/components/getAcPage/getAcPage.vue'),
-          },
-          {
-            path: 'tableZenPage',
-            name: 'tableZenPage',
-            component: () => import('@/views/components/tableZenPage/tableZenPage.vue'),
-          },
-          {
-            path: 'plopjs',
-            name: 'plopjs',
-            component: () => import('@/views/components/plopjs/plopjs.vue'),
-          }
-        ]
+        children: componentsList
       },
       {
         path: '/about',
