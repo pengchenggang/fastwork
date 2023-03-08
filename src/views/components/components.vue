@@ -88,11 +88,13 @@ export default {
     }
   }
   a.ivu-anchor-link-title {
-    line-height: 26px;
+    line-height: 1;
+    font-size: 14px;
+    color: #515a6e;
   }
   .ivu-anchor-link {
-    // padding: 8px 0 8px 16px;
-    padding: 2px 0 2px 16px;
+    padding: 8px 0 8px 16px;
+    // padding: 2px 0 2px 16px;
   }
   ul.list,
   ol.list {

@@ -1,10 +1,12 @@
 <template>
   <div>
     <div style="position: absolute; width: 200px;">
-      <slot name="anchor"></slot>
+      <anchorZenByFile></anchorZenByFile>
+      <!-- <slot name="anchor"></slot> -->
     </div>
     <div style="margin-left: 200px;">
-      <slot name="content"></slot>
+      <!-- <slot name="content"></slot> -->
+      <slot></slot>
     </div>
   </div>
 </template>

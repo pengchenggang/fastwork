@@ -7,6 +7,7 @@ import 'view-design/dist/styles/iview.css'
 import './main.less'
 import compLayout from '@/views/components/compLayout.vue'
 import anchorZen from '@/components/anchorZen/anchorZen.vue'
+import anchorZenByFile from '@/components/anchorZen/anchorZenByFile.vue'
 import Highlight from './directive/highlight' // 这里是你项目highlight.js所在路径
 import playground from '@/components/playground/playground.vue'
 import codeZen from '@/components/playground/codeZen.vue'
@@ -29,6 +30,7 @@ Vue.component('Anchor', Anchor)
 Vue.component('AnchorLink', AnchorLink)
 Vue.component('Affix', Affix)
 Vue.component('anchorZen', anchorZen)
+Vue.component('anchorZenByFile', anchorZenByFile)
 Vue.component('Row', Row)
 Vue.component('Col', Col)
 Vue.component('Card', Card)
