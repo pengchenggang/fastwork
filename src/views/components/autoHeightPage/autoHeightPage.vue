@@ -27,7 +27,7 @@
         <h2 id="YDM">源代码</h2>
         <codeIn>
           <codeZen url="src/components/autoHeight/autoHeight.vue"
-                   codeClass=""></codeZen>
+                   codeClass="language-xml"></codeZen>
         </codeIn>
       </div>
     </compLayout>
