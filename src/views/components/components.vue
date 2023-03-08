@@ -90,6 +90,7 @@ export default {
   a.ivu-anchor-link-title {
     line-height: 1;
     font-size: 14px;
+    padding-bottom: 2px;
     color: #515a6e;
   }
   .ivu-anchor-link {
