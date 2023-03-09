@@ -171,6 +171,35 @@ module.exports = function(plop) {
       <blockquote>
         <p>这样生成的文件里面的变量就被替换了</p>
       </blockquote>
+      <h2 id="TJYMGNFX">添加页面功能分析</h2>
+      <ul class="list">
+        <li>在src/views/components下建立页面目录 名字为 变量name</li>
+        <li>将模板文件copy到刚才的目录下文件名为 [name].vue</li>
+        <li>模板文件相应id替换成name的名字</li>
+        <li>将页面的路由添加上 重点就是添加路由</li>
+      </ul>
+      <h3>创建目录和文件的action这么写</h3>
+      <codeIn>
+        <pre v-highlight><code>actions: [
+  {
+    type: 'add', // 代表添加文件
+    path: 'src/components/{_{name}_}/{_{name}_}.vue', // 这里的name就是上面定义的键 忽略下划线
+    templateFile: 'plop-templates/component.hbs'
+  }
+]
+</code></pre>
+      </codeIn>
+    <h3>修改路由的代码</h3>
+    <codeIn>
+        <pre v-highlight><code>actions: [{
+      type: 'modify',
+      path: 'src/router/index.js',
+      pattern: /\/\/ ---ROUTER_IMPORT---/g,
+      template: `{path: '${path}', name: '/main/${path}', component: () => import('src/components/main/${filePath}/${path}')},
+       // ---ROUTER_IMPORT---` // 这个是查找文件插入位置的标识
+</code></pre>
+      </codeIn>
+      <p>代码来源：<a href="https://blog.csdn.net/gaoyan666/article/details/110480430" target="_blank">link</a></p>
     </compLayout>
   </div>
 </template>
