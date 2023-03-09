@@ -4,7 +4,9 @@
           :active-name="activeName"
           @on-select="selectHandle"
           style="position: fixed; height: calc(100% - 60px); top: 60px; overflow: auto;">
-      <MenuItem v-for="item in componentsList" :name="item.name" :key="item.name">{{ item.naviName }}</MenuItem>
+      <MenuItem v-for="item in componentsList"
+                :name="item.name"
+                :key="item.name">{{ item.naviName }}</MenuItem>
     </Menu>
     <div style="margin-left: 240px; padding: 10px;">
       <!-- <div style="height: 30px; line-height: 30px;">当前位置: 组件代码 / {{ activeName }}</div> -->
@@ -60,13 +62,20 @@ export default {
   font-size: 16px;
   font-family: 微软雅黑;
 
+  .codePink {
+    padding: 5px;
+    background-color: #fff4f4;
+    color: #c2185b;
+  }
+
   table.Alita {
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
     border-top: 1px solid #e8eaec;
     border-left: 1px solid #e8eaec;
-    td, th {
+    td,
+    th {
       border-right: 1px solid #e8eaec;
       border-bottom: 1px solid #e8eaec;
       padding: 5px 10px;

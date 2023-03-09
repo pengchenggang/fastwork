@@ -14,12 +14,14 @@ import codeZen from '@/components/playground/codeZen.vue'
 import codeIn from '@/components/playground/codeIn.vue'
 import AsyncTool from '@/libs/asyncTool'
 import tableZen from '@/components/tableZen/tableZen.vue'
+import codePink from '@/components/codePink/codePink.vue'
 
 Vue.prototype.$getAc = () => {
   return new AsyncTool()
 }
 Vue.use(Highlight)
 
+Vue.component('c', codePink)
 Vue.component('compLayout', compLayout)
 Vue.component('Button', Button)
 Vue.component('Table', Table)

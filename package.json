@@ -6,6 +6,7 @@
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "public": "node ./script-ci/giteeUpdate5.js",
+    "plop": "plop",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -30,6 +31,7 @@
     "eslint-plugin-vue": "^8.0.3",
     "less": "^4.1.3",
     "less-loader": "^11.1.0",
+    "plop": "^3.1.2",
     "raw-loader": "^4.0.2",
     "vue-template-compiler": "^2.6.14"
   }
