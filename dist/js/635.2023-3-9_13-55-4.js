@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkfastwork"]=self["webpackChunkfastwork"]||[]).push([[635],{8635:function(s,e,k){s.exports=k.p+"img/logo.269b1330.png"}}]);
