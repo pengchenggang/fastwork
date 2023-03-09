@@ -8,11 +8,12 @@
         <li>plopjs 官网：<a href="https://plopjs.com/documentation/"
              target="_blank">https://plopjs.com/documentation/</a></li>
       </ul>
-      <h2 id="安装依赖库">安装依赖库</h2>
+      <h2 id="AZYLK">安装依赖库</h2>
       <c>npm install --save-dev plop</c> 先把库装上
-      <h2 id="配置文件">配置文件</h2>
+      <h2 id="PZWJ">配置文件</h2>
       <p>根目录创建 <c>plopfile.js</c>
       </p>
+      <h3>plopfile.js</h3>
       <codeIn>
         <pre v-highlight><code>export default function (plop) {
   // 入口函数
@@ -23,10 +24,10 @@
   })
 };</code></pre>
       </codeIn>
-      <h2 id="执行脚本">执行脚本</h2>
+      <h2 id="ZXJB">执行脚本</h2>
+      <h3>package.json</h3>
       <codeIn>
-        <pre v-highlight><code>// package.json
-{
+        <pre v-highlight><code>{
     ...,
     "scripts": {
         "plop": "plop"
@@ -34,15 +35,14 @@
     ...
 }</code></pre>
       </codeIn>
-      <h2 id="修改脚本类型">修改脚本类型</h2>
+      <h2 id="XGJBLX">修改脚本类型</h2>
       <p>如果不了解ESM,可以看我写的这篇文章
         <a href="https://www.cnblogs.com/pengchenggang/p/17037512.html"
            target="_blank">CommonJs VS ES Module</a>
       </p>
-
+      <h3>package.json</h3>
       <codeIn>
-        <pre v-highlight><code>// package.json
-{
+        <pre v-highlight><code>{
     ...,
     "type": "module",
     ...
@@ -51,7 +51,8 @@
       <blockquote>
         <p>到这里我们已经可以通过 <c>npm run plop</c> 跑通这个命令了，最小循环已完成，下面进行配置文件的扩展。</p>
       </blockquote>
-      <h2 id="配置文件带提问">配置文件带提问</h2>
+      <h2 id="PZWJDTW">配置文件带提问</h2>
+      <h3>plopfile.js</h3>
       <codeIn>
         <pre v-highlight><code>export default function (plop) {
     // controller generator
@@ -76,13 +77,13 @@
         </li>
         <li>报错 发现找不到 <c>plop-templates/controller.hbs</c> 文件</li>
       </ul>
-      <h2 id="创建模板文件">创建模板文件</h2>
+      <h2 id="CJMBWJ">创建模板文件</h2>
       <ul class="list">
         <li>先在根目录创建 <c>plop-templates</c> 目录</li>
         <li>再在里面创建 <c>controller.hbs</c> 文件</li>
         <li>执行 <c>npm run plop</c> 输入name, 然后会在src的目录下生成指定的文件</li>
       </ul>
-      <h2 id="恢复commonjs">恢复commonjs</h2>
+      <h2 id="HFcommonjs">恢复commonjs</h2>
       <ul class="list">
         <li>package.json中 如果不写type, 默认是commonjs。</li>
         <li>
@@ -114,7 +115,62 @@
   })
 }</code></pre>
       </codeIn>
+      <h2 id="DTAction">动态Action</h2>
+      <p>需求：执行不同的动作</p>
+      <h3>plopfile.js</h3>
+      <codeIn>
+        <pre v-highlight><code>module.exports = function (plop) {
+  plop.setGenerator('fc_page', {
+    description: 'application fc_page logic',
+    prompts: [{
+      type: 'confirm',
+      name: 'needLess',
+      message: '是否需要样式文件（默认需要）',
+      default:true,
+    }],
+    actions(data) {
+      if (data.needLess) {
+        return [];
+      }
+      return [];
+    },
+  });
+};</code></pre>
+      </codeIn>
+      <h2 id="DGsetGenerator">多个setGenerator</h2>
+      <ul class="list">
+        <li>需求：有多个命令的时候，设置多个生成器</li>
+        <li>可以使用 <c>npm run plop [name]</c> 执行相应的命令</li>
+        <li>如果不输入[name]会出来个列表，进行选择</li>
+      </ul>
+      <h3>plopfile.js</h3>
+      <codeIn>
+        <pre v-highlight><code>const viewGenerator = require('./plop-templates/view/prompt')
+const componentGenerator = require('./plop-templates/component/prompt')
+const storeGenerator = require('./plop-templates/store/prompt.js')
 
+module.exports = function(plop) {
+  plop.setGenerator('view', viewGenerator)
+  plop.setGenerator('component', componentGenerator)
+  plop.setGenerator('store', storeGenerator)
+}</code></pre>
+      </codeIn>
+      <h2 id="Handlebars">Handlebars模板语言</h2>
+      <ul class="list">
+        <li>需求：模板里面的需要有替换的变量</li>
+        <li>Handlebars官网：<a href="https://handlebarsjs.com/zh/guide/"
+             target="_blank">https://handlebarsjs.com/zh/guide/</a></li>
+      </ul>
+      <h3>plop-templates/controller.hbs</h3>
+      <codeIn>
+        <pre v-highlight><code><div>
+{_{name}_} // 忽略下划线
+  </div>
+</code></pre>
+      </codeIn>
+      <blockquote>
+        <p>这样生成的文件里面的变量就被替换了</p>
+      </blockquote>
     </compLayout>
   </div>
 </template>
