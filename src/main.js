@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 // import ViewUI from 'view-design'
-import { Button, Table, Menu, MenuItem, Layout, Anchor, AnchorLink, Affix, Row, Col, Card, Divider, Icon, Page } from 'view-design'
+import { Button, Table, Menu, MenuItem, Layout, Anchor, AnchorLink, Affix, Row, Col, Card, Divider, Icon, Page, Input } from 'view-design'
 import 'view-design/dist/styles/iview.css'
 import './main.less'
 import compLayout from '@/views/components/compLayout.vue'
@@ -24,6 +24,7 @@ Vue.use(Highlight)
 Vue.component('c', codePink)
 Vue.component('compLayout', compLayout)
 Vue.component('Button', Button)
+Vue.component('Input', Input)
 Vue.component('Table', Table)
 Vue.component('Menu', Menu)
 Vue.component('MenuItem', MenuItem)

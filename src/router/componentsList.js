@@ -29,5 +29,11 @@ export const componentsList = [
     naviName: 'Markdown加载组件',
     component: () => import('@/views/components/loadMarkdownPage/loadMarkdownPage.vue'),
   },
+  {
+    path: 'intInputPage',
+    name: 'intInputPage',
+    naviName: '整数输入框',
+    component: () => import('@/views/components/intInputPage/intInputPage.vue'),
+  },
   // ---ROUTER_IMPORT---
 ]
