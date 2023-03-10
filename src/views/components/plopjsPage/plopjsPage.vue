@@ -211,9 +211,9 @@ module.exports = function(plop) {
       <h3>plop-templates/componentsListTemplate.hbs</h3>
       <codeIn>
         <pre v-highlight><code>{
-    path: '{{eName}}Page',
-    name: '{{eName}}Page',
-    naviName: '{{cName}}',
+    path: '{_{eName}_}Page',
+    name: '{_{eName}_}Page',
+    naviName: '{_{cName}_}',
     component: () => import('@/views/components/{_{eName}_}Page/{_{eName}_}Page.vue'), // 忽略下划线
   },
   // ---ROUTER_IMPORT---

@@ -1,7 +1,7 @@
 <template>
   <div>
     <compLayout>
-      <h1>{{cName}}</h1>
+      <h1>{_{cName}_}</h1> 忽略下划线
       <h2 id="GS">概述</h2>
       <p>概述描述</p>
     </compLayout>
@@ -11,7 +11,7 @@
 <script>
 
 export default {
-  name: '{{eName}}Page',
+  name: '{_{eName}_}Page 忽略下划线',
   props: {},
   components: {
   },
