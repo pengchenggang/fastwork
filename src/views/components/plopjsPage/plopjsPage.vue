@@ -189,8 +189,8 @@ module.exports = function(plop) {
 ]
 </code></pre>
       </codeIn>
-    <h3>修改路由的代码</h3>
-    <codeIn>
+      <h3>修改路由的代码</h3>
+      <codeIn>
         <pre v-highlight><code>actions: [{
       type: 'modify',
       path: 'src/router/index.js',
@@ -199,7 +199,31 @@ module.exports = function(plop) {
        // ---ROUTER_IMPORT---` // 这个是查找文件插入位置的标识
 </code></pre>
       </codeIn>
-      <p>代码来源：<a href="https://blog.csdn.net/gaoyan666/article/details/110480430" target="_blank">link</a></p>
+      <p>代码来源：<a href="https://blog.csdn.net/gaoyan666/article/details/110480430"
+           target="_blank">link</a></p>
+
+      <h2 id="YDM">源代码</h2>
+      <h3>plopfile.js</h3>
+      <codeIn>
+        <codeZen url="src/views/components/plopjsPage/plopfile.js"
+                 codeClass="language-javascript"></codeZen>
+      </codeIn>
+      <h3>plop-templates/componentsListTemplate.hbs</h3>
+      <codeIn>
+        <pre v-highlight><code>{
+    path: '{{eName}}Page',
+    name: '{{eName}}Page',
+    naviName: '{{cName}}',
+    component: () => import('@/views/components/{_{eName}_}Page/{_{eName}_}Page.vue'), // 忽略下划线
+  },
+  // ---ROUTER_IMPORT---
+</code></pre>
+      </codeIn>
+      <h3>plop-templates/compTemplate.hbs</h3>
+      <codeIn>
+        <codeZen url="src/views/components/plopjsPage/compTemplate.vue"
+                 codeClass="language-xml"></codeZen>
+      </codeIn>
     </compLayout>
   </div>
 </template>
