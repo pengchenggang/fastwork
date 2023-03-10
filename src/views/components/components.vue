@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import { componentsList } from "@/router"
+import { componentsList } from "@/router/componentsList.js"
 export default {
   name: 'components',
   props: {},
