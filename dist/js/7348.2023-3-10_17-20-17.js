@@ -1,1 +1,0 @@
-"use strict";(self["webpackChunkfastwork"]=self["webpackChunkfastwork"]||[]).push([[7348],{7348:function(s,f,k){k.r(f),f["default"]="123\r\n* fdskl"}}]);
