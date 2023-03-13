@@ -113,6 +113,13 @@ export default {
       line-height: 28px;
     }
   }
+
+  ul, ol {
+    padding-left: 28px;
+    li {
+      line-height: 28px;
+    }
+  }
   // ul {
   //   list-style: none;
   //   // padding-left: 20px;

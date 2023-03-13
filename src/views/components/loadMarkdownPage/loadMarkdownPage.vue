@@ -15,13 +15,12 @@
         <li><a href="https://github.com/markdown-it/markdown-it"
              target="_blank">markdown github</a></li>
       </ul>
-      <markdown :mFile="mFile" slotName="main"></markdown>
+      <markdown :mFile="mFile"></markdown>
     </compLayout>
   </div>
 </template>
 
 <script>
-
 export default {
   name: 'loadMarkdownPage',
   props: {},

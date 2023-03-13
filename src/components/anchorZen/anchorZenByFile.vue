@@ -17,6 +17,18 @@ export default {
   watch: {},
   computed: {},
   methods: {
+    init () {
+      // console.info('this.$parent.$el.innerHTML', this.$parent.$el.innerHTML)
+      const content = this.$parent.$el.innerHTML
+      console.info('content', content)
+      const reg = /<h2 id=\"[\s\S]*?<\/h2>/ig
+      const m2 = this.getRegExec(reg, content)
+      console.info('m2', m2)
+      this.links = []
+      m2.forEach(item => {
+        this.links.push(this.getRegObj(item))
+      })
+    },
     getRegObj (txt) {
       const reg = /<h2 id=\"([\s\S]*?)\">([\s\S]*?)<\/h2>/
       const m = reg.exec(txt)
@@ -42,15 +54,7 @@ export default {
   created () { },
   activated () { },
   mounted () {
-    // console.info('this.$parent.$el.innerHTML', this.$parent.$el.innerHTML)
-    const content = this.$parent.$el.innerHTML
-    const reg = /<h2 id=\"[\s\S]*?<\/h2>/ig
-    const m2 = this.getRegExec(reg, content)
-    console.info('m2', m2)
-    this.links = []
-    m2.forEach(item => {
-      this.links.push(this.getRegObj(item))
-    })
+    setTimeout(this.init, 200)
   },
   beforeDestroy () { },
 }

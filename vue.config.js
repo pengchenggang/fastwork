@@ -9,6 +9,17 @@ ret += '-' + date.getMinutes()
 ret += '-' + date.getSeconds()
 const timeStamp = ret
 module.exports = defineConfig({
+  // runtimeCompiler: true,
+  // vue.config.js
+  chainWebpack: (config) => {
+    // 使用自定义 loader
+    config.module
+      .rule("raw-loader")
+      .test(/\.md$/)
+      .use("raw-loader")
+      .loader("raw-loader")
+      .end()
+  },
   configureWebpack: {
     // devtool: 'source-map',
     output: { // 输出重构  打包编译后的 文件名称  【模块名称.版本号.时间戳】
