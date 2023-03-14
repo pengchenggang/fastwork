@@ -35,5 +35,11 @@ export const componentsList = [
     naviName: '整数输入框',
     component: () => import('@/views/components/intInputPage/intInputPage.vue'),
   },
+  {
+    path: 'inputExamplePage',
+    name: 'inputExamplePage',
+    naviName: 'Input例子',
+    component: () => import('@/views/components/inputExamplePage/inputExamplePage.vue'),
+  },
   // ---ROUTER_IMPORT---
 ]

@@ -39,6 +39,11 @@
                   title="普通表格1">
         普通表格
       </playground>
+      <h2 id="YDM">源代码</h2>
+      <codeIn>
+        <codeZen url="src/components/tableZen/tableZen.vue"
+                 codeClass="language-xml"></codeZen>
+      </codeIn>
     </compLayout>
   </div>
 </template>

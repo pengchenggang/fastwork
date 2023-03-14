@@ -8,7 +8,7 @@
         <div style="padding: 16px;">
           <slot name="left"></slot>
         </div>
-        <Divider orientation="left">普通表格</Divider>
+        <Divider orientation="left">{{ title }}</Divider>
         <div style="padding: 0 16px 16px 16px; font-size: 16px;">
           <slot name="left2"></slot>
         </div>
@@ -17,13 +17,13 @@
              style="padding: 16px; position: relative;">
         <div style="position: absolute; text-align: center; bottom: 0; width: 100%; z-index: 10;">
           <Button type="text"
-                  style="width: 80%"
+                  style="width: 20%"
                   @click="expandCollapseHandle">
             <Icon type="ios-arrow-up" />
             <Icon type="ios-arrow-down" />
           </Button>
         </div>
-        <div class="example-code-more"></div>
+        <!-- <div class="example-code-more"></div> -->
         <div style="overflow: hidden; transition: height .2s ease-in-out;"
              :style="{
       height: cardHeight+'px'

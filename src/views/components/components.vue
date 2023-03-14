@@ -114,7 +114,13 @@ export default {
     }
   }
 
-  ul, ol {
+  // 影响了iview的样式
+  ul.ivu-select-dropdown-list {
+    padding-left: 0;
+  }
+
+  ul,
+  ol {
     padding-left: 28px;
     li {
       line-height: 28px;
