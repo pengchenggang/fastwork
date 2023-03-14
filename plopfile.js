@@ -21,6 +21,11 @@ module.exports = function (plop) {
         templateFile: 'plop-templates/compTemplate.hbs'
       },
       {
+        type: 'add',
+        path: 'src/views/components/{{eName}}Page/{{eName}}Page.md',
+        templateFile: 'plop-templates/compMarkdown.md'
+      },
+      {
         type: 'modify',
         path: 'src/router/componentsList.js',
         pattern: /\/\/ ---ROUTER_IMPORT---/g, // ---ROUTER_IMPORT--- // 这个是查找文件插入位置的标识

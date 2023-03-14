@@ -4,7 +4,7 @@ let exec = require('child_process').exec
 // import async from 'async'
 let async = require('async')
 // const { readFileSync, writeFileSync } = require('fs')
-// const fs = require('fs-extra')
+const fs = require('fs-extra')
 
 // 获取当前日期函数
 // function getNowFormatDate () {
@@ -41,6 +41,10 @@ async.series([
 
   //   next()
   // },
+  next => {
+    fs.copyFileSync('dist/index.html', 'dist/404.html')
+    next()
+  },
   next => { exec('git add .', () => next()) },
   next => { exec('git push', () => next()) },
   next => { exec('git commit -m buildFastByGiteeUpdate', () => next()) },
