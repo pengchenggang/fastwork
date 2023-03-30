@@ -5,13 +5,13 @@ module.exports = function (plop) {
     prompts: [
       {
         type: 'input',
-        name: 'eName',
-        message: '请输入页面英文名字（key):'
+        name: 'cName',
+        message: '请输入页面中文名字:'
       },
       {
         type: 'input',
-        name: 'cName',
-        message: '请输入页面中文名字:'
+        name: 'eName',
+        message: '请输入页面英文名字（key):'
       },
     ],
     actions: [

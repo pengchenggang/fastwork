@@ -37,7 +37,7 @@ export default {
                 '</code></pre></div>'
             } catch (__) { }
           }
-          console.info('md.utils.escapeHtml(str)', md)
+          // console.info('md.utils.escapeHtml(str)', md)
           return '<div class="codeInClass"><pre><code class="hljs">' + md.utils.escapeHtml(str) + '</code></pre></div>'
         }
       })
@@ -45,7 +45,7 @@ export default {
       import(`../../${codeUrl}`).then(module => {
         const t = md.render(module.default)
         this.html = md.render(module.default).replace(/\<h2>(.*?)<\/h2>/g, function (itemA, a1) {
-          console.info('itemA', itemA, a1)
+          // console.info('itemA', itemA, a1)
           return `<h2 id='${escape(a1)}'>${a1}</h2>`
         })
       })

@@ -41,5 +41,11 @@ export const componentsList = [
     naviName: 'Input例子',
     component: () => import('@/views/components/inputExamplePage/inputExamplePage.vue'),
   },
+  {
+    path: 'layoutPage',
+    name: 'layoutPage',
+    naviName: 'layout页面',
+    component: () => import('@/views/components/layoutPage/layoutPage.vue'),
+  },
   // ---ROUTER_IMPORT---
 ]

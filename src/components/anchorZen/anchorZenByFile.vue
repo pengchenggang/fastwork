@@ -20,10 +20,10 @@ export default {
     init () {
       // console.info('this.$parent.$el.innerHTML', this.$parent.$el.innerHTML)
       const content = this.$parent.$el.innerHTML
-      console.info('content', content)
+      // console.info('content', content)
       const reg = /<h2 id=\"[\s\S]*?<\/h2>/ig
       const m2 = this.getRegExec(reg, content)
-      console.info('m2', m2)
+      // console.info('m2', m2)
       this.links = []
       m2.forEach(item => {
         this.links.push(this.getRegObj(item))
@@ -32,7 +32,7 @@ export default {
     getRegObj (txt) {
       const reg = /<h2 id=\"([\s\S]*?)\">([\s\S]*?)<\/h2>/
       const m = reg.exec(txt)
-      console.info('m', m)
+      // console.info('m', m)
       // 0: "<h2 id="APIPROPS">API属性</h2>"
       // 1: "APIPROPS"
       // 2: "API属性"
