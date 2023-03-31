@@ -54,8 +54,8 @@ export default {
 ## 外部页面使用
 ```
 <layout>
-    <div slot="r1c1">
+    <template slot="r1c1">
       yourCode
-    </div>
+    </template>
 </layout>
 ```
