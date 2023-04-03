@@ -47,5 +47,11 @@ export const componentsList = [
     naviName: 'layout页面',
     component: () => import('@/views/components/layoutPage/layoutPage.vue'),
   },
+  {
+    path: 'initPage',
+    name: 'initPage',
+    naviName: '页面初始化',
+    component: () => import('@/views/components/initPage/initPage.vue'),
+  },
   // ---ROUTER_IMPORT---
 ]
