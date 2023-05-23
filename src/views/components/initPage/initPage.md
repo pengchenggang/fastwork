@@ -1,4 +1,4 @@
-## 创建layout页面
+## 创建页面模板
 ```
 <template>
   <div></div>
