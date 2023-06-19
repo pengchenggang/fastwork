@@ -1,12 +1,11 @@
 ## 创建页面模板
 ```
 <template>
-  <div></div>
+  <span style="display: inline-block;"></span>
 </template>
 
 <script>
 export default {
-  name: '',
   components: {},
   props: {},
   data () {
