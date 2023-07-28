@@ -53,5 +53,11 @@ export const componentsList = [
     naviName: '页面初始化',
     component: () => import('@/views/components/initPage/initPage.vue'),
   },
+  {
+    path: 'validatorPage',
+    name: 'validatorPage',
+    naviName: '表单自定义验证',
+    component: () => import('@/views/components/validatorPage/validatorPage.vue'),
+  },
   // ---ROUTER_IMPORT---
 ]

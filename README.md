@@ -1,6 +1,9 @@
 # fastwork
 vue2 iview 快速搭建模块研究 利用 plopjs 微型脚手架
 
+# 添加一个页面
+输入 plop
+
 # 访问地址
 https://pengchenggang.gitee.io/fastwork/
 
