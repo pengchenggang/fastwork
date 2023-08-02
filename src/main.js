@@ -16,7 +16,9 @@ import AsyncTool from '@/libs/asyncTool'
 import tableZen from '@/components/tableZen/tableZen.vue'
 import codePink from '@/components/codePink/codePink.vue'
 import markdown from '@/components/markdown/markdown.vue'
+import { api } from '@/libs/api.js'
 
+Vue.prototype.$api = api
 Vue.prototype.$getAc = () => {
   return new AsyncTool()
 }

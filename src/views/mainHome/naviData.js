@@ -14,4 +14,9 @@ export const naviData = [
     to: '/about',
     name: 'about'
   },
+  {
+    title: 'TodoList',
+    to: '/todoList',
+    name: 'todoList'
+  },
 ]

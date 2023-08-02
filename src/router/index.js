@@ -28,6 +28,11 @@ const routes = [
         path: '/about',
         name: 'about',
         component: () => import('@/views/AboutView.vue')
+      },
+      {
+        path: '/todoList',
+        name: 'todoList',
+        component: () => import('@/views/TodoList/TodoList.vue')
       }
     ]
   },

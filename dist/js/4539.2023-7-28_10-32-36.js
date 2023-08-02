@@ -1,1 +1,0 @@
-"use strict";(self["webpackChunkfastwork"]=self["webpackChunkfastwork"]||[]).push([[4539],{4539:function(e,t,n){n.r(t),t["default"]='<template>\n  <div id="app">\n    <router-view/>\n  </div>\n</template>\n\n<style>\n</style>\n'}}]);
