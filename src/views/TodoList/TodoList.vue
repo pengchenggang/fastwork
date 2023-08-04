@@ -1,6 +1,6 @@
 <template>
   <span style="display: inline-block;">
-    TodoList
+    <div>显示接口data {{ list }}</div>
   </span>
 </template>
 
@@ -10,6 +10,7 @@ export default {
   props: {},
   data () {
     return {
+      list: null,
     }
   },
   watch: {},
@@ -18,11 +19,15 @@ export default {
   created () { },
   activated () { },
   mounted () {
+    this.$api('/todoList/list').then(res => {
+      if (res && res.status === 20) {
+        this.list = res.data
+      }
+    })
     const params = {
-      a: 1,
-      b: 2
+      name: 'abc'
     }
-    this.$api('/todoList/demo', params).then(res => { })
+    this.$api('/todoList/insert', params).then(res => {})
   },
   beforeDestroy () { }
 }
