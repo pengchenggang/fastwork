@@ -41,8 +41,8 @@ const routes = [
 const router = new VueRouter({
   routes,
   base: '/fastwork/',
-  mode: 'history'
-  // mode: 'hash'
+  // mode: 'history'
+  mode: 'hash'
 })
 
 export default router

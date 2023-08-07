@@ -7,6 +7,7 @@
     "build": "vue-cli-service build",
     "public": "node ./script-ci/giteeUpdate5.js",
     "plop": "plop",
+    "build:war": "cd dist && jar -cvf ../fastwork.war *",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
