@@ -41,6 +41,7 @@ export default {
   props: {},
   data () {
     return {
+      insertModal: false,
       currRow: { name: '' },
       editModal: false,
       list: [],
@@ -59,6 +60,9 @@ export default {
   watch: {},
   computed: {},
   methods: {
+    insertCancelHandle () {
+      this.insertModal = false
+    },
     insertOkHandle () {
       const params = {
         name: this.currRow.name
