@@ -1,8 +1,8 @@
 <template>
-  <span style="display: inline-block;">
-    <div style="padding: 30px;">
+  <span style="display: block;">
+    <div style="padding: 30px; width: 400px; margin: 0 auto;">
       <Button type="primary"
-            @click="insertHandle">新建</Button>
+              @click="insertHandle">新建</Button>
       <Table :columns="columns1"
              style="width: 300px;"
              :data="list">
@@ -67,7 +67,8 @@ export default {
       const params = {
         name: this.currRow.name
       }
-      this.$api('/todoList/insert', params).then(res => {
+      // /todoList/insert
+      this.$api('/todo2/insert', params).then(res => {
         if (res && res.status === 20) {
           this.searchTable()
         }
@@ -85,7 +86,8 @@ export default {
       const params = {
         ...this.currRow
       }
-      this.$api('/todoList/update', params).then(res => {
+      // /todoList/update
+      this.$api('/todo2/update', params).then(res => {
         if (res && res.status === 20) {
           this.searchTable()
         }
@@ -95,7 +97,9 @@ export default {
       this.editModal = false
     },
     searchTable () {
-      this.$api('/todoList/list').then(res => {
+      // const url = '/todoList/list'
+      const url = '/todo2/tabulation'
+      this.$api(url).then(res => {
         if (res && res.status === 20) {
           this.list = res.data
         }
@@ -105,17 +109,44 @@ export default {
       const params = {
         deleteId: row.id
       }
-      this.$api('/todoList/delete', params).then(res => {
+      // /todoList/delete
+      this.$api('/todo2/delete', params).then(res => {
         if (res && res.status === 20) {
           this.searchTable()
         }
       })
+    },
+    webSocketTest () {
+      const url = 'ws://192.168.40.54:8012/verifyDevice?deviceId=abc'
+      // 建立webSocket连接
+      const websocket = new WebSocket(url)
+      // 打开webSokcet连接时，回调该函数
+      websocket.onopen = () => console.log("连接建立")
+
+      // 关闭webSocket连接时，回调该函数
+      websocket.onclose = () => console.log("连接关闭")
+      // 接收信息
+      websocket.onmessage = function (res) {
+        console.info('webSocket res', res)
+        // const obj = eval('(' + res.data + ')')
+        // // 显示身份证信息和图片
+        // if (obj && obj.msg === "cardInfo") {
+        //   console.info("调用discernToInfo方法")
+        //   discernToInfo(obj)
+        // }
+        // 只显示图片
+        // else if (obj && obj.msg == "imgInfo") {
+        //   console.info("调用imgToInfo方法")
+        //   imgToInfo(obj)
+        // }
+      }
     },
   },
   created () { },
   activated () { },
   mounted () {
     this.searchTable()
+    this.webSocketTest()
   },
   beforeDestroy () { }
 }

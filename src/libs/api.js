@@ -42,8 +42,8 @@ export const api = (url, data, config = {}) => {
     baseURL: 'http://127.0.0.1:8012/fastwork-api/',
     data: formatedData,
     headers: {},
-    // withCredentials: true, // 后台 同时配置'Access-Control-Allow-Origin': '指定IP:端口' 不能是*
-    withCredentials: false, // 后台 同时配置'Access-Control-Allow-Origin': '指定IP:端口' 不能是*
+    withCredentials: true, // 后台 同时配置'Access-Control-Allow-Origin': '指定IP:端口' 不能是*
+    // withCredentials: false, // 后台 同时配置'Access-Control-Allow-Origin': '指定IP:端口' 不能是*
     method: method,
     responseType: responseType
   }).then(res => {

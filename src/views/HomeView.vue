@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <br>
+    <span style="font-size:48px">访问量：{{ counter }}</span>
     <br>
     <br>
     <br>
@@ -15,6 +16,17 @@
 export default {
   name: 'HomeView',
   components: {
+  },
+  data () {
+    return {
+      counter: '',
+    }
+  },
+  mounted () {
+    this.$api('https://phprgtyhkz.hk.aircode.run/getCounter').then(res => {
+      console.info('res', res)
+      this.counter = res.data
+    })
   }
 }
 </script>
