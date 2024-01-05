@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkfastwork"]=self["webpackChunkfastwork"]||[]).push([[1067],{91067:function(t,a,e){e.r(a),a["default"]='<template>\n  <div class="about">\n    about\n  </div>\n</template>\n'}}]);

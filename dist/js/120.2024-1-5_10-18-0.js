@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkfastwork"]=self["webpackChunkfastwork"]||[]).push([[120],{70120:function(e,r,n){n.r(r),r["default"]="## 暂无标题\r\n* 暂无内容\r\n```\r\nyourCodeTemplate\r\n```"}}]);
