@@ -59,5 +59,11 @@ export const componentsList = [
     naviName: '表单自定义验证',
     component: () => import('@/views/components/validatorPage/validatorPage.vue'),
   },
+  {
+    path: 'modal-pagePage',
+    name: 'modal-pagePage',
+    naviName: 'Modal模板',
+    component: () => import('@/views/components/modal-pagePage/modal-pagePage.vue'),
+  },
   // ---ROUTER_IMPORT---
 ]

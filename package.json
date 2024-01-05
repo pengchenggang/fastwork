@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vue-cli-service serve --port=8091",
+    "nodev": "node -v",
     "build": "vue-cli-service build",
     "public": "node ./script-ci/giteeUpdate5.js",
     "plop": "plop",
